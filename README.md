@@ -46,7 +46,7 @@ functions.
 Examples
 ========
 
-There is a plain lua example and an interactive one based on the [http://love2d.org](LÖVE)
+There is a plain lua example and an interactive one based on the [LÖVE](http://love2d.org)
 game library. To run the examples you'll need to get the engine from
 [http://love2d.org](http://love2d.org). Once you have the love executable, move into the
 examples/love directory and run "love ."
