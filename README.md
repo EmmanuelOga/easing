@@ -2,22 +2,19 @@ Easing Library
 ==============
 
 This is a lua port of the Robert Penner's equations for easing. You can find much
-more information about it on his web site:
+more information about it on [http://www.robertpenner.com/easing/](his web site).
 
-http://www.robertpenner.com/easing/
+This library was based off:
 
-This library was based of two libraries:
+* [http://code.google.com/p/tweener/] (Tweener, ActionScript tweening library)
+* [http://coderepos.org/share/wiki/JSTweener] (JavaScript port of tweener, by Yuichi Tateno)
 
-* http://code.google.com/p/tweener/ -- ActionScript tweening library
-* http://coderepos.org/share/wiki/JSTweener -- JavaScript version of tweener (ported by Yuichi Tateno)
-
-However, this library only includes the function, and not any kind of tweening
-helpers.
+However, only the easing functions are included, and not any kind of tweening helpers.
 
 Usage
 =====
 
-Requiring the easing library returns a table with all the different
+Requiring the easing library returns a table which contains all the different
 functions.
 
     local easingFunctions = require("easing")
@@ -54,7 +51,7 @@ game library. To run the examples you'll need to get the engine from
 http://love2d.org. Once you have the love executable, move into the
 examples/love directory and run "love ."
 
-![love2d running easing examples](/doc/ease-love.png "easing on love2d")
+![love2d running easing examples](https://github.com/EmmanuelOga/easing/raw/master/doc/ease-love.png "easing on love2d")
 
 License
 =======
