@@ -21,7 +21,7 @@ functions.
 
     outInBounce = easingFunctions.outInBounce
 
-    -- All easing functions take this parameters:
+    -- All easing functions take these parameters:
     --
     -- t = time     should go from 0 to duration
     -- b = begin    value of the property being ease.
