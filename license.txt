@@ -1,8 +1,10 @@
-Yuichi Tateno. <hotchpotch@N0!spam@gmail.com> http://rails2u.com/
+Tweener authors,
+Yuichi Tateno,
+Emmanuel Oga
 
 The MIT License
 --------
-Copyright (c) 2007 Yuichi Tateno.
+Copyright (c) 2010, Emmanuel Oga.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
