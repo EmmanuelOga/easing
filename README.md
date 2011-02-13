@@ -53,6 +53,15 @@ examples/love directory and run "love ."
 
 ![love2d running easing examples](https://github.com/EmmanuelOga/easing/raw/master/doc/ease-love.png "easing on love2d")
 
+Running Tests
+=============
+
+To run the tests you'll need [https://github.com/norman/telescope](telescope).
+From the library's root directory, run:
+
+    ▸ tsc tests/easing_tests.lua
+    80 tests 80 passed 80 assertions 0 failed 0 errors 0 unassertive 0 pending
+
 License
 =======
 
