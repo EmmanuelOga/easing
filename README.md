@@ -62,6 +62,11 @@ From the library's root directory, run:
     ▸ tsc tests/easing_tests.lua
     80 tests 80 passed 80 assertions 0 failed 0 errors 0 unassertive 0 pending
 
+TODO
+====
+
+Copy the documentation from the tweener source and convert it to luadoc.
+
 License
 =======
 
