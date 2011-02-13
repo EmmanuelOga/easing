@@ -6,8 +6,8 @@ more information about it on [http://www.robertpenner.com/easing/](his web site)
 
 This library was based off:
 
-* [http://code.google.com/p/tweener/] (Tweener, ActionScript tweening library)
-* [http://coderepos.org/share/wiki/JSTweener] (JavaScript port of tweener, by Yuichi Tateno)
+* [http://code.google.com/p/tweener/](Tweener, ActionScript tweening library)
+* [http://coderepos.org/share/wiki/JSTweener](JavaScript port of tweener, by Yuichi Tateno)
 
 However, only the easing functions are included, and not any kind of tweening helpers.
 
