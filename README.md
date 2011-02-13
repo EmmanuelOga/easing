@@ -46,9 +46,9 @@ functions.
 Examples
 ========
 
-There is a plain lua example and an interactive one based on the LÖVE
+There is a plain lua example and an interactive one based on the [http://love2d.org](LÖVE)
 game library. To run the examples you'll need to get the engine from
-http://love2d.org. Once you have the love executable, move into the
+[http://love2d.org](http://love2d.org). Once you have the love executable, move into the
 examples/love directory and run "love ."
 
 ![love2d running easing examples](https://github.com/EmmanuelOga/easing/raw/master/doc/ease-love.png "easing on love2d")
