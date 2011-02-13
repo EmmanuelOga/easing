@@ -10,13 +10,21 @@
 -- c = change == ending - beginning
 -- d = duration
 
+local pow = math.pow
+local sin = math.sin
+local cos = math.cos
+local pi = math.pi
+local sqrt = math.sqrt
+local abs = math.abs
+local asin  = math.asin
+
 local function linear(t, b, c, d)
   return c * t / d + b
 end
 
 local function inQuad(t, b, c, d)
   t = t / d
-  return c * math.pow(t, 2) + b
+  return c * pow(t, 2) + b
 end
 
 local function outQuad(t, b, c, d)
@@ -27,7 +35,7 @@ end
 local function inOutQuad(t, b, c, d)
   t = t / d * 2
   if t < 1 then
-    return c / 2 * math.pow(t, 2) + b
+    return c / 2 * pow(t, 2) + b
   else
     return -c / 2 * ((t - 1) * (t - 3) - 1) + b
   end
@@ -35,12 +43,12 @@ end
 
 local function inCubic (t, b, c, d)
   t = t / d
-  return c * math.pow(t, 3) + b
+  return c * pow(t, 3) + b
 end
 
 local function outCubic(t, b, c, d)
   t = t / d - 1
-  return c * (math.pow(t, 3) + 1) + b
+  return c * (pow(t, 3) + 1) + b
 end
 
 local function inOutCubic(t, b, c, d)
@@ -63,21 +71,21 @@ end
 
 local function inQuart(t, b, c, d)
   t = t / d
-  return c * math.pow(t, 4) + b
+  return c * pow(t, 4) + b
 end
 
 local function outQuart(t, b, c, d)
   t = t / d - 1
-  return -c * (math.pow(t, 4) - 1) + b
+  return -c * (pow(t, 4) - 1) + b
 end
 
 local function inOutQuart(t, b, c, d)
   t = t / d * 2
   if t < 1 then
-    return c / 2 * math.pow(t, 4) + b
+    return c / 2 * pow(t, 4) + b
   else
     t = t - 2
-    return -c / 2 * (math.pow(t, 4) - 2) + b
+    return -c / 2 * (pow(t, 4) - 2) + b
   end
 end
 
@@ -91,21 +99,21 @@ end
 
 local function inQuint(t, b, c, d)
   t = t / d
-  return c * math.pow(t, 5) + b
+  return c * pow(t, 5) + b
 end
 
 local function outQuint(t, b, c, d)
   t = t / d - 1
-  return c * (math.pow(t, 5) + 1) + b
+  return c * (pow(t, 5) + 1) + b
 end
 
 local function inOutQuint(t, b, c, d)
   t = t / d * 2
   if t < 1 then
-    return c / 2 * math.pow(t, 5) + b
+    return c / 2 * pow(t, 5) + b
   else
     t = t - 2
-    return c / 2 * (math.pow(t, 5) + 2) + b
+    return c / 2 * (pow(t, 5) + 2) + b
   end
 end
 
@@ -118,15 +126,15 @@ local function outInQuint(t, b, c, d)
 end
 
 local function inSine(t, b, c, d)
-  return -c * math.cos(t / d * (math.pi / 2)) + c + b
+  return -c * cos(t / d * (pi / 2)) + c + b
 end
 
 local function outSine(t, b, c, d)
-  return c * math.sin(t / d * (math.pi / 2)) + b
+  return c * sin(t / d * (pi / 2)) + b
 end
 
 local function inOutSine(t, b, c, d)
-  return -c / 2 * (math.cos(math.pi * t / d) - 1) + b
+  return -c / 2 * (cos(pi * t / d) - 1) + b
 end
 
 local function outInSine(t, b, c, d)
@@ -141,7 +149,7 @@ local function inExpo(t, b, c, d)
   if t == 0 then
     return b
   else
-    return c * math.pow(2, 10 * (t / d - 1)) + b - c * 0.001
+    return c * pow(2, 10 * (t / d - 1)) + b - c * 0.001
   end
 end
 
@@ -149,7 +157,7 @@ local function outExpo(t, b, c, d)
   if t == d then
     return b + c
   else
-    return c * 1.001 * (-math.pow(2, -10 * t / d) + 1) + b
+    return c * 1.001 * (-pow(2, -10 * t / d) + 1) + b
   end
 end
 
@@ -158,10 +166,10 @@ local function inOutExpo(t, b, c, d)
   if t == d then return b + c end
   t = t / d * 2
   if t < 1 then
-    return c / 2 * math.pow(2, 10 * (t - 1)) + b - c * 0.0005
+    return c / 2 * pow(2, 10 * (t - 1)) + b - c * 0.0005
   else
     t = t - 1
-    return c / 2 * 1.0005 * (-math.pow(2, -10 * t) + 2) + b
+    return c / 2 * 1.0005 * (-pow(2, -10 * t) + 2) + b
   end
 end
 
@@ -175,21 +183,21 @@ end
 
 local function inCirc(t, b, c, d)
   t = t / d
-  return(-c * (math.sqrt(1 - math.pow(t, 2)) - 1) + b)
+  return(-c * (sqrt(1 - pow(t, 2)) - 1) + b)
 end
 
 local function outCirc(t, b, c, d)
   t = t / d - 1
-  return(c * math.sqrt(1 - math.pow(t, 2)) + b)
+  return(c * sqrt(1 - pow(t, 2)) + b)
 end
 
 local function inOutCirc(t, b, c, d)
   t = t / d * 2
   if t < 1 then
-    return -c / 2 * (math.sqrt(1 - t * t) - 1) + b
+    return -c / 2 * (sqrt(1 - t * t) - 1) + b
   else
     t = t - 2
-    return c / 2 * (math.sqrt(1 - t * t) + 1) + b
+    return c / 2 * (sqrt(1 - t * t) + 1) + b
   end
 end
 
@@ -212,16 +220,16 @@ local function inElastic(t, b, c, d, a, p)
 
   local s
 
-  if not a or a < math.abs(c) then
+  if not a or a < abs(c) then
     a = c
     s = p / 4
   else
-    s = p / (2 * math.pi) * math.asin(c/a)
+    s = p / (2 * pi) * asin(c/a)
   end
 
   t = t - 1
 
-  return -(a * math.pow(2, 10 * t) * math.sin((t * d - s) * (2 * math.pi) / p)) + b
+  return -(a * pow(2, 10 * t) * sin((t * d - s) * (2 * pi) / p)) + b
 end
 
 -- a: amplitud
@@ -237,14 +245,14 @@ local function outElastic(t, b, c, d, a, p)
 
   local s
 
-  if not a or a < math.abs(c) then
+  if not a or a < abs(c) then
     a = c
     s = p / 4
   else
-    s = p / (2 * math.pi) * math.asin(c/a)
+    s = p / (2 * pi) * asin(c/a)
   end
 
-  return a * math.pow(2, -10 * t) * math.sin((t * d - s) * (2 * math.pi) / p) + c + b
+  return a * pow(2, -10 * t) * sin((t * d - s) * (2 * pi) / p) + c + b
 end
 
 -- p = period
@@ -259,19 +267,19 @@ local function inOutElastic(t, b, c, d, a, p)
   if not p then p = d * (0.3 * 1.5) end
   if not a then a = 0 end
 
-  if not a or a < math.abs(c) then
+  if not a or a < abs(c) then
     a = c
     s = p / 4
   else
-    s = p / (2 * math.pi) * math.asin(c / a)
+    s = p / (2 * pi) * asin(c / a)
   end
 
   if t < 1 then
     t = t - 1
-    return -0.5 * (a * math.pow(2, 10 * t) * math.sin((t * d - s) * (2 * math.pi) / p)) + b
+    return -0.5 * (a * pow(2, 10 * t) * sin((t * d - s) * (2 * pi) / p)) + b
   else
     t = t - 1
-    return a * math.pow(2, -10 * t) * math.sin((t * d - s) * (2 * math.pi) / p ) * 0.5 + c + b
+    return a * pow(2, -10 * t) * sin((t * d - s) * (2 * pi) / p ) * 0.5 + c + b
   end
 end
 
