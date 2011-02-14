@@ -56,7 +56,7 @@ examples/love directory and run "love ."
 Running Tests
 =============
 
-To run the tests you'll need [https://github.com/norman/telescope](telescope).
+To run the tests you'll need [telescope](https://github.com/norman/telescope).
 From the library's root directory, run:
 
     ▸ tsc tests/easing_tests.lua
