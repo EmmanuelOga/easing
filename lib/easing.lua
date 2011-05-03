@@ -60,6 +60,14 @@ local function inOutQuad(t, b, c, d)
   end
 end
 
+local function outInQuad(t, b, c, d)
+  if t < d / 2 then
+    return outQuad (t * 2, b, c / 2, d)
+  else
+    return inQuad((t * 2) - d, b + c / 2, c / 2, d)
+  end
+end
+
 local function inCubic (t, b, c, d)
   t = t / d
   return c * pow(t, 3) + b
@@ -385,6 +393,7 @@ return {
   inQuad = inQuad,
   outQuad = outQuad,
   inOutQuad = inOutQuad,
+  outInQuad = outInQuad,
   inCubic  = inCubic ,
   outCubic = outCubic,
   inOutCubic = inOutCubic,
