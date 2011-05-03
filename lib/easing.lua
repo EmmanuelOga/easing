@@ -24,10 +24,10 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 ]]
 
 -- For all easing functions:
--- t = time
+-- t = elapsed time
 -- b = begin
 -- c = change == ending - beginning
--- d = duration
+-- d = duration (total time)
 
 local pow = math.pow
 local sin = math.sin
