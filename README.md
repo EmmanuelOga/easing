@@ -78,3 +78,8 @@ Authors
 * Tweener authors
 * Yuichi Tateno
 * Emmanuel Oga
+
+Contributors
+============
+
+* kikito (Enrique García) (https://github.com/EmmanuelOga/easing/pull/2)
