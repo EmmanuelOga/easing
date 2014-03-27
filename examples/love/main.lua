@@ -18,9 +18,11 @@ CHART_X = ( W - CHART_W ) / 2
 CHART_Y = ( H - CHART_H ) / 2
 
 function love.load()
-  love.graphics.setFont(FONT_SIZE)
-  love.graphics.setLine(LINE_SIZE, "smooth")
-  love.graphics.setPoint(POINT_SIZE, "smooth")
+  love.graphics.setFont(love.graphics.newFont(FONT_SIZE))
+  love.graphics.setLineWidth(LINE_SIZE)
+  love.graphics.setLineStyle("smooth")
+  love.graphics.setPointSize(POINT_SIZE)
+  love.graphics.setPointStyle("smooth")
 
   -- put all easing function names inside an array for easy navigation by array index.
   functions = {}
