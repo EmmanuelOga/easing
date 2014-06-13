@@ -5,7 +5,6 @@ local function renderFun(x, y, w, h, funName)
   love.graphics.setColor(128, 128, 128, 128)
   love.graphics.line(x, y + h, x + w, y)
 
-  love.graphics.setLineStipple(0xFFF0, 1)
   for i = 0, 10 do
     love.graphics.setColor(128, 128, 128, 128)
     love.graphics.line(x,              y + h * i / 10, x + w,          y + h * i / 10)
@@ -14,7 +13,6 @@ local function renderFun(x, y, w, h, funName)
     love.graphics.print(i / 10, i * (w / 10) + x - FONT_SIZE / 2, y + h + FONT_SIZE / 2)
     love.graphics.print(i / 10, x - FONT_SIZE * 2, y + h - i * (h / 10) - FONT_SIZE / 2)
   end
-  love.graphics.setLineStipple(0xFFFF, 1)
 
   love.graphics.setColor(255, 255, 255, 255)
   love.graphics.line(x, y, x, y + h, x + w, y + h)
