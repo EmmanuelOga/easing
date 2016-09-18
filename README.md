@@ -84,4 +84,4 @@ Contributors
 ============
 
 * kikito (Enrique García) (https://github.com/EmmanuelOga/easing/pull/2)
-* Narrev (https://github.com/EmmanuelOga/easing/pull/5)
+* Narrev (https://github.com/EmmanuelOga/easing/pull/6)
