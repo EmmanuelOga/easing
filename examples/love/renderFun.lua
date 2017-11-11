@@ -31,8 +31,7 @@ local function renderFun(x, y, w, h, funName)
     love.graphics.setColor(0, 0, 255, alpha)
     love.graphics.line(i, j, i1, j1)
     love.graphics.setColor(255, 255, 0, alpha)
-    love.graphics.point(i, j)
-    love.graphics.point(i1, j1)
+    love.graphics.points(i,j,i1,j1)
   end
 
   -- get the function and plot it.
