@@ -22,7 +22,6 @@ function love.load()
   love.graphics.setLineWidth(LINE_SIZE)
   love.graphics.setLineStyle("smooth")
   love.graphics.setPointSize(POINT_SIZE)
-  love.graphics.setPointStyle("smooth")
 
   -- put all easing function names inside an array for easy navigation by array index.
   functions = {}
