@@ -2,12 +2,12 @@ Easing Library
 ==============
 
 This is a lua port of the Robert Penner's equations for easing. You can find much
-more information about it on [http://www.robertpenner.com/easing/](his web site).
+more information about it on [his web site](http://www.robertpenner.com/easing/).
 
 This library was based off:
 
-* [http://code.google.com/p/tweener/](Tweener, ActionScript tweening library)
-* [http://coderepos.org/share/wiki/JSTweener](JavaScript port of tweener, by Yuichi Tateno)
+* [Tweener, ActionScript tweening library](http://code.google.com/p/tweener/)
+* [JavaScript port of tweener, by Yuichi Tateno](http://coderepos.org/share/wiki/JSTweener)
 
 However, only the easing functions are included, and not any kind of tweening helpers.
 
